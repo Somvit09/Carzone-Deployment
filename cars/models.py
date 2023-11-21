@@ -92,7 +92,7 @@ class Car(models.Model):
         ('New', 'New'),
         ('Used', 'Used'),
     )
-    condition = MultiSelectField(choices=conditions)
+    condition = MultiSelectField(choices=conditions, max_length=50)
     price = models.IntegerField()
     description = RichTextField()
     car_photo = models.ImageField(upload_to='photos/%Y/%m/%d/')
