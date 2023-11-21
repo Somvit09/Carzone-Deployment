@@ -100,7 +100,7 @@ class Car(models.Model):
     car_photo_2 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     car_photo_3 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     car_photo_4 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
-    features = MultiSelectField(choices=features_choices)
+    features = MultiSelectField(choices=features_choices, max_length=50)
     body_type = (
         ('Sport', 'Sport'),
         ('SUV', 'SUV'),
@@ -108,14 +108,14 @@ class Car(models.Model):
         ('Classic', 'Classic'),
         ('Royal', 'Royal'),
     )
-    body_style = MultiSelectField(choices=body_type)
+    body_style = MultiSelectField(choices=body_type, max_length=50)
     engine = models.CharField(max_length=100)
     transmission_type = (
         ('Manual', 'Manual'),
         ('Automatic', 'Automatic'),
         ('CVT', 'CVT'),
     )
-    transmission = MultiSelectField(choices=transmission_type)
+    transmission = MultiSelectField(choices=transmission_type, max_length=50)
     interior = models.CharField(max_length=100)
     miles = models.FloatField()
     door_choices = (
@@ -125,7 +125,7 @@ class Car(models.Model):
         ('5', '5'),
         ('6', '6'),
     )
-    doors = MultiSelectField(choices=door_choices)
+    doors = MultiSelectField(choices=door_choices, max_length=50)
     passengers = models.IntegerField()
     vin_no = models.CharField(max_length=100)
     milage = models.FloatField()
@@ -134,7 +134,7 @@ class Car(models.Model):
         ('Diesel', 'Diesel'),
         ('Electric', 'Electric'),
     )
-    fuel_type = MultiSelectField(choices=fuel)
+    fuel_type = MultiSelectField(choices=fuel, max_length=50)
     no_of_owners = models.CharField(max_length=100)
     is_featured = models.BooleanField(default=False)
     created_date = models.DateTimeField(default=datetime.now, blank=True)
