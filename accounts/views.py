@@ -101,7 +101,7 @@ def register(request):
                         last_name=last_name,
                         password=hashed_password
                     )
-                    auth_login(request, user)
+                    auth_login(request, user, backend='django.contrib.auth.backends.ModelBackend')
 
                     # JWT
                     refresh = RefreshToken.for_user(user)
@@ -134,7 +134,7 @@ def login(request):
                 messages.error(request, "Password is incorrect.")
                 return redirect('login')
             else:
-                auth_login(request, user)
+                auth_login(request, user, backend='django.contrib.auth.backends.ModelBackend')
                 # JWT
                 refresh = RefreshToken.for_user(user)
                 serialized_user = UserSerializer(user).data
