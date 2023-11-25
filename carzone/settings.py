@@ -29,7 +29,17 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+    'https://carzone-deployment-production.up.railway.app'
+]
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'carzone-deployment-production.up.railway.app', ]
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+    'https://carzone-deployment-production.up.railway.app'
+]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
