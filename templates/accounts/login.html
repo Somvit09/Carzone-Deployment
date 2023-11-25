@@ -50,7 +50,7 @@
                         <ul class="social-list">
                             <li><a href="{% url 'social:begin' 'facebook' %}" class="facebook-bg"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li>
                             <li><a href="{% url 'social:begin' 'google-oauth2' %}" class="google-bg"><i class="fa fa-google google-i"></i><span>Google</span></a></li>
-                            <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin linkedin-i"></i><span>Linkedin</span></a></li>
+                            <li><a href="{% url 'social:begin' backend='linkedin-oauth2' %}" class="linkedin-bg"><i class="fa fa-linkedin linkedin-i"></i><span>Linkedin</span></a></li>
                             <li><a href="{% url 'social:begin' 'github' %}" class="github-bg"><i class="fa fa-brands fa-github"></i><span>GitHub</span></a></li>
                         </ul>
                     </form>
