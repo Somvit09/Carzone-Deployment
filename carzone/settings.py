@@ -29,7 +29,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'carzone-main-sam.herokuapp.com', ]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'carzone-deployment-production.up.railway.app', ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
