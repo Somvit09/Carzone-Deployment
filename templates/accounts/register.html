@@ -3,7 +3,6 @@
 {% block title %} | Register {% endblock %}
 {% block content %}
 {% load static %}
-{% load socialaccount %}
 
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
@@ -64,8 +63,10 @@
                         </div>
                         <div class="clearfix"></div>
                         <ul class="social-list">
-                            <li><a href="{% provider_login_url 'facebook' method='js_sdk' %}" class="facebook-bg"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li>
-                            <li><a href="{% provider_login_url 'google' %}" class="google-bg"><i class="fa fa-google google-i"></i><span>Google</span></a></li>
+                            <li><a href="{% url 'social:begin' 'facebook' %}" class="facebook-bg"><i class="fa fa-facebook facebook-i"></i><span>Facebook</span></a></li>
+                            <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin linkedin-i"></i><span>Linkedin</span></a></li>
+                            <li><a href="#" class="google-bg"><i class="fa fa-google google-i"></i><span>Google</span></a></li>
+                            <li><a href="{% url 'social:begin' 'github' %}" class="github-bg"><i class="fa fa-brands fa-github"></i><span>GitHub</span></a></li>
                         </ul>
                     </form>
                     <p>Already a member? <a href="{% url 'login' %}" class="thembo"> Login here</a></p>
