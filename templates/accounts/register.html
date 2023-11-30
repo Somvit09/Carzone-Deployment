@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %} | Register {% endblock %}
 {% block content %}
-{% load static %}
 
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
@@ -69,7 +68,7 @@
                             <li><a href="{% url 'social:begin' 'github' %}" class="github-bg"><i class="fa fa-brands fa-github"></i><span>GitHub</span></a></li>
                         </ul>
                     </form>
-                    <p>Already a member? <a href="{% url 'login' %}" class="thembo"> Login here</a></p>
+                    <p>Already a member? <strong><a href="{% url 'login' %}" class="thembo"> Login here</a></strong> </p>
                 </div>
             </div>
         </div>

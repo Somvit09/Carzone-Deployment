@@ -918,12 +918,10 @@ input[type=checkbox]:checked + label:before {
     width: 0;
 }
 
-.banner-bg {
-    background: url("../img/banner/banner-1.jpg");
-}
+
 
 .item-bg {
-    /*background: url("../img/banner-1.jpg");*/
+
     height: 100vh;
     /*animation: bgburnsEast 25s linear infinite alternate;
     -webkit-animation: bgburnsEast 25s linear infinite alternate;*/
@@ -4658,7 +4656,7 @@ footer {
 
 /** Listings parallax start **/
 .listings-parallax {
-    background: url(../img/listings-parallax.jpg);
+
     z-index: 0;
     background-position: center center;
     background-repeat: no-repeat;
@@ -5474,7 +5472,7 @@ footer {
 }
 
 .contact-section .bg-img {
-    background: rgba(0, 0, 0, 0.04) url(../img/bg-img-2.jpg) top left repeat;
+    
     background-size: cover;
     top: 0;
     bottom: 0;
